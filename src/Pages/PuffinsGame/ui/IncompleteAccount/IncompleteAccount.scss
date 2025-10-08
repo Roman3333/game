@@ -1,0 +1,31 @@
+@use '@/app/Vars.scss' as *;
+
+.incomplete {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  background: $colorWhite;
+  border-left: 4px solid $colorMiddleRed;
+  border-radius: 24px;
+
+  &__icon {
+    margin-bottom: auto;
+  }
+
+  &__column {
+    margin-left: 12px;
+  }
+
+  &__text {
+    max-width: 316px;
+    margin-top: 8px;
+    font-weight: 500;
+    line-height: 20px;
+    color: $colorLightGrey;
+    font-family: $fontMontserrat;
+  }
+
+  &__btn {
+    margin-left: auto;
+  }
+}

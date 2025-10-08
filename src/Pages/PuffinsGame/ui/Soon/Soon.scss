@@ -1,0 +1,82 @@
+@use '@/app/Vars.scss' as *;
+
+.puffins-soon {
+  width: 430px;
+  height: 236px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $colorBlackGrey;
+  border: 3px solid $colorRainGreen;
+  border-radius: 16px;
+  box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &__mini {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__modal {
+    position: fixed;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: calc(100vw - 32px);
+    max-height: calc(100vh - 32px);
+    overflow-x: hidden;
+    z-index: 80;
+    transition: all 0.3s;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0 auto;
+  }
+
+  &__btn {
+    margin-right: 12px;
+  }
+
+  &__icon path {
+    fill: rgba($colorWhite, 0.8);
+    stroke: rgba($colorWhite, 0.1);
+  }
+
+  &__cards {
+    max-width: 1568px;
+    padding: 80px 103px 67px;
+    margin-top: 60px;
+    border: 8px solid $colorRainGreen;
+    border-radius: 32px;
+    overflow-x: auto;
+    display: flex;
+    gap: 32px;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__bg {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    transition: all 0.3s;
+  }
+}
+
+@media (max-height: 816px) {
+  .puffins-soon__cards {
+    margin-top: 12px;
+  }
+}

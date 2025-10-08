@@ -1,0 +1,108 @@
+@use '@/app/Vars.scss' as *;
+
+.auth-modal {
+  padding: 40px;
+  background: rgba($colorNeutralGrey, 0.32);
+  border-radius: 24px;
+  border-bottom: none;
+
+  .puffins-modal__top {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .puffins-modal__btn {
+    display: none;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__progress {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__steps {
+    font-weight: 500;
+    font-family: $fontMontserrat;
+    color: $colorNeutralGrey;
+  }
+
+  &__text {
+    max-width: 412px;
+    margin: 12px 0 32px;
+    font-weight: 500;
+    line-height: 20px;
+    font-family: $fontMontserrat;
+    color: $colorNeutralGrey;
+  }
+
+  &__input-wrapper {
+    .input-wrapper__label {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      font-family: $fontMontserrat;
+      color: $colorWhite;
+    }
+
+    .input-wrapper__error {
+      line-height: 20px;
+    }
+
+    .input-wrapper__icon {
+      top: 45px;
+      right: 14px;
+    }
+  }
+
+  &__input {
+    margin-top: 12px !important;
+    padding: 10px 14px !important;
+    border-radius: 16px !important;
+  }
+
+  &__btns {
+    margin: 40px 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .button-puffins.x,
+  .button-puffins.discord {
+    width: 302px;
+    height: 48px;
+    border-radius: 16px;
+    -webkit-text-stroke-width: initial;
+    text-stroke-width: initial;
+
+    span {
+      width: calc(100% - 102px);
+      border-radius: 16px 0 0 16px;
+      font-family: $fontMontserrat;
+      line-height: 20px;
+
+      &::after {
+        clip-path: polygon(58% 0, 0 0, 0% 100%);
+      }
+    }
+
+    svg {
+      margin-right: 32px;
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+  }
+
+  &__form {
+    margin-top: 32px;
+  }
+}

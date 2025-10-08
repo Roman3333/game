@@ -1,0 +1,22 @@
+@use '@/app/Vars.scss' as *;
+
+.auth-modal {
+  &.auth-modal--big {
+    max-width: 775px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__back:hover &__arrow path {
+    stroke: $colorEco2Grey;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 11px;
+  }
+}

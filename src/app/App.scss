@@ -1,0 +1,27 @@
+@use './Vars.scss' as *;
+
+@font-face {
+  font-family: 'Play Story';
+  src: url('/fonts/Play-Story.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Daily Bubble';
+}
+
+section {
+  padding: 80px 0;
+}
+
+.container-puffins {
+  max-width: 1432px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.section-puffins {
+  padding: 0;
+}

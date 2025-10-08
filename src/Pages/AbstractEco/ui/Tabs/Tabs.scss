@@ -1,0 +1,32 @@
+@use '@/app/Vars.scss' as *;
+
+.eco-tabs {
+  margin: 32px 0 20px;
+  display: flex;
+  gap: 12px;
+
+  &__tab {
+    width: 102px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-bottom: 4px solid $colorMiddleGreen;
+    background: $colorGrokGreen;
+    color: $colorWhite;
+    font-family: $fontPlayStory;
+
+    &:first-child {
+      font-size: 24px;
+    }
+
+    &:hover,
+    &.active {
+      background: $colorNeutralBlue;
+      border-bottom: 4px solid $colorEcoBlue;
+    }
+  }
+}

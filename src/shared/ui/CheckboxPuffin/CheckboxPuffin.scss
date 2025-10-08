@@ -1,0 +1,51 @@
+@use '@/app/Vars.scss' as *;
+
+.checkbox-puffin {
+  display: flex;
+  height: fit-content;
+
+  &__input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    border: 1px solid $colorMiddleGreen;
+    border-radius: 100%;
+    cursor: pointer;
+
+    &.s {
+      min-width: 20px;
+      height: 20px;
+
+      &:checked::before {
+        width: 5px;
+        height: 9px;
+        border-width: 0 2px 2px 0;
+      }
+    }
+
+    &.m {
+      min-width: 32px;
+      height: 32px;
+
+      &:checked::before {
+        width: 8px;
+        height: 14px;
+        border-width: 0 3px 3px 0;
+      }
+    }
+
+    &:checked {
+      background-color: $colorMiddleGreen;
+    }
+
+    &:checked::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: solid $colorWhite;
+      transform: translate(-50%, -60%) rotate(45deg);
+    }
+  }
+}

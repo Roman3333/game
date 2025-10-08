@@ -1,0 +1,150 @@
+@use '@/app/Vars.scss' as *;
+
+.eco {
+  margin-top: 8px;
+  padding: 24px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-radius: 16px;
+  border: 1px solid $colorEco1Grey;
+  background: rgba($colorBlack, 0.32);
+
+  &__avatar {
+    border-radius: 100%;
+  }
+
+  &__centr {
+    margin-left: 10px;
+    padding: 16px 0;
+  }
+
+  &__top {
+    display: flex;
+  }
+
+  &__name {
+    font-size: 26px;
+    line-height: 32px;
+    text-transform: uppercase;
+    font-family: $fontRowdies;
+    color: $colorWhite;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  &__medals {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__medal {
+    padding: 4px 8px;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 15px;
+    border-radius: 12px;
+    font-family: $fontMontserrat;
+    color: $colorWhite;
+
+    &--nft {
+      background: $colorMiddleViolet;
+    }
+
+    &--partner {
+      background: $colorOilBlue;
+    }
+
+    &--og {
+      background: $colorLightOrange;
+    }
+  }
+
+  &__founder {
+    margin: 8px 0 24px;
+    line-height: 20px;
+    font-weight: 600;
+    font-family: $fontMontserrat;
+    color: $colorEco1Grey;
+  }
+
+  &__hash {
+    font-family: $fontRowdies;
+    color: $colorWhite;
+  }
+
+  &__right {
+    margin-left: auto;
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 12px;
+  }
+
+  &__abstract {
+    max-width: 90px;
+    line-height: 20px;
+    text-align: end;
+    font-family: $fontRowdies;
+    color: $colorWhite;
+  }
+
+  &__count {
+    font-weight: 700;
+    font-size: 64px;
+    font-family: $fontMontserrat;
+    color: $colorWhite;
+  }
+
+  &__bottom {
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__more {
+    margin-left: 150px;
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 16px;
+    font-family: $fontMontserrat;
+    color: $colorGrokGreen;
+
+    &:hover {
+      color: $colorPopupGreen;
+    }
+  }
+
+  &__score {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 16px;
+    font-family: $fontMontserrat;
+    color: $colorEco2Grey;
+
+    &:hover {
+      color: $colorEco1Grey;
+
+      .eco__link path {
+        stroke: $colorEco1Grey;
+      }
+    }
+  }
+
+  &__link path {
+    stroke: $colorEco2Grey;
+  }
+}

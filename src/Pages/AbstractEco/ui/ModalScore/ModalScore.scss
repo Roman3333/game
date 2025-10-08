@@ -1,0 +1,272 @@
+@use '@/app/Vars.scss' as *;
+
+.score-modal {
+  max-width: 1180px;
+  max-height: calc(100svh - 157px);
+  padding: 32px 60px;
+  top: 136px;
+  transform: translate(-50%, 0%);
+  background: rgba($colorBlack, 0.32);
+  color: $colorWhite;
+  border-radius: 16px;
+  border-bottom: none;
+
+  > div:first-child {
+    display: none;
+  }
+
+  &__top {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__avatar {
+    border-radius: 100%;
+  }
+
+  &__info {
+    padding: 16px 0;
+  }
+
+  &__info-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__info-name {
+    font-size: 32px;
+    line-height: 40px;
+    font-family: $fontRowdies;
+  }
+
+  &__link {
+    margin-top: 5px;
+    display: flex;
+  }
+
+  &__rang {
+    margin: 8px 0;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: $colorGrokGreen;
+  }
+
+  &__dates {
+    display: flex;
+    gap: 6px;
+  }
+
+  &__rang,
+  &__reg,
+  &__date {
+    font-family: $fontMontserrat;
+  }
+
+  &__abstract {
+    margin: 60px 0 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    max-width: 135px;
+  }
+
+  &__score {
+    margin: -50px 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 8px;
+  }
+
+  &__score-score {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 64px;
+    font-family: $fontMontserrat;
+  }
+
+  &__score-text {
+    font-family: $fontMontserrat;
+  }
+
+  &__botom {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__wallet,
+  &__followers {
+    width: 100%;
+    height: 394px;
+    padding: 32px;
+    border-radius: 40px;
+    background: rgba($colorEco3Grey, 0.32);
+  }
+
+  &__wallet {
+    max-width: 437px;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      position: absolute;
+      right: -100px;
+      bottom: -100px;
+      content: '';
+      width: 200px;
+      height: 200px;
+      background: rgba($colorEco3Grey, 0.5);
+      z-index: -1;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__followers {
+    max-width: 588px;
+  }
+
+  &__wallet-score {
+    margin: 24px 0 20px;
+    display: flex;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  &__wallet-span {
+    font-family: $fontRowdies;
+  }
+
+  &__table {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &:first-child {
+      max-width: 170px;
+      width: 100%;
+    }
+
+    &:last-child {
+      max-width: 180px;
+      width: 100%;
+    }
+  }
+
+  &__column-item {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    line-height: 20px;
+  }
+
+  &__column-opacity {
+    opacity: 0.6;
+    font-weight: 600;
+    font-family: $fontMontserrat;
+  }
+
+  &__column-number {
+    font-weight: 600;
+    font-family: $fontMontserrat;
+  }
+
+  &__colors {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+  }
+
+  &__color {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+
+    &.blue {
+      background: $colorGhostBlue;
+    }
+
+    &.orange {
+      background: $colorGhostOrange;
+    }
+
+    &.purple {
+      background: $colorGhostViolet;
+    }
+  }
+
+  &__users {
+    margin: 20px 0 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__user {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    object-fit: cover;
+    background: $colorEco3Grey;
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__bages {
+    margin: 52px 0 100px;
+  }
+
+  &__bages-images {
+    margin-top: 24px;
+    display: flex;
+    gap: 16px;
+  }
+
+  &__bages-image {
+    border-radius: 16px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__puffins-left {
+    font-size: 40px;
+    line-height: 46px;
+    font-family: $fontBowlby;
+  }
+
+  &__update {
+    display: flex;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__update-left {
+    opacity: 0.6;
+    font-family: $fontMontserrat;
+  }
+
+  &__update-right {
+    font-family: $fontMontserrat;
+  }
+}

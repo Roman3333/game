@@ -1,0 +1,98 @@
+@use '@/app/Vars.scss' as *;
+
+.puffins-leader {
+  padding: 5px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid $colorLiGrey;
+
+  &:first-child {
+    margin-bottom: 4px;
+
+    .puffins-leader__lvl {
+      background-color: $colorMiddleGreen;
+    }
+
+    .puffins-leader__rank {
+      color: $colorDarkGreen;
+    }
+  }
+
+  &__rank {
+    width: 86px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 24px;
+    color: $colorWhite;
+    font-family: $fontRowdies;
+  }
+
+  &__info {
+    width: 174px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__left {
+    position: relative;
+  }
+
+  &__avatar {
+    border-radius: 100%;
+  }
+
+  &__lvl {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $fontMontserrat;
+    font-size: 8px;
+    line-height: 8px;
+    border-radius: 100%;
+    font-weight: 800;
+    color: $colorWhite;
+    background-color: transparent;
+    border-right: 1.2px solid rgba(255, 255, 255, 0.6);
+  }
+
+  &__item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__name {
+    font-weight: 700;
+    line-height: 20px;
+    color: $colorWhite;
+    font-family: $fontRowdies;
+  }
+
+  &__link {
+    display: flex;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 11px;
+    color: $colorWhite;
+    font-family: $fontMontserrat;
+    white-space: nowrap;
+  }
+
+  &__coins {
+    width: 94px;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: end;
+    color: $colorWhite;
+    font-family: $fontRowdies;
+  }
+}

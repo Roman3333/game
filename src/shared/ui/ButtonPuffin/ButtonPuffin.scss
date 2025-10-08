@@ -1,0 +1,342 @@
+@use '@/app/Vars.scss' as *;
+
+.button-puffins {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: $colorWhite;
+
+  &.primary {
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 12px;
+
+    &:active {
+      background-color: var(--dark-blue);
+    }
+  }
+
+  &.x,
+  &.discord {
+    width: 434px;
+    height: 72px;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-radius: 24px;
+    -webkit-text-stroke-width: 1px;
+    text-stroke-width: 1px;
+
+    span {
+      width: calc(100% - 144px);
+      height: 100%;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      border-radius: 24px 0 0 24px;
+      line-height: 24px;
+      font-family: $fontPlayStory;
+      position: relative;
+      transition: all 0.3s;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -34px;
+        width: 34px;
+        height: 100%;
+        clip-path: polygon(100% 0, 0 0, 0% 100%);
+        transition: all 0.3s;
+      }
+    }
+
+    svg {
+      margin-right: 24px;
+    }
+  }
+
+  &.x {
+    background-color: $colorDarkGrey;
+    border-bottom: 4px solid $colorDarkGrey;
+    -webkit-text-stroke-color: $colorDarkGrey;
+    text-stroke-color: $colorDarkGrey;
+
+    span {
+      background-color: $colorMiddleGrey;
+
+      &::after {
+        background: $colorMiddleGrey;
+      }
+    }
+
+    &:hover {
+      background-color: $colorMiddleGrey;
+      border-bottom: 4px solid $colorMiddleGrey;
+
+      span {
+        background-color: rgba($colorDarkGrey, 0.8);
+
+        &::after {
+          background-color: rgba($colorDarkGrey, 0.8);
+        }
+      }
+    }
+  }
+
+  &.discord {
+    background-color: $colorMiddleBlue;
+    border-bottom: 4px solid $colorMiddleBlue;
+    -webkit-text-stroke-color: $colorMiddleBlue;
+    text-stroke-color: $colorMiddleBlue;
+
+    span {
+      background-color: $colorLightBlue;
+
+      &::after {
+        background: $colorLightBlue;
+      }
+    }
+
+    &:hover {
+      background-color: $colorLightBlue;
+      border-bottom: 4px solid $colorLightBlue;
+
+      span {
+        background-color: rgba($colorMiddleBlue, 0.8);
+
+        &::after {
+          background-color: rgba($colorMiddleBlue, 0.8);
+        }
+      }
+    }
+  }
+
+  &.join {
+    max-width: 451px;
+    width: 100%;
+    padding: 13px 20px;
+    background-color: $colorNeutralBlue;
+    border: 1px solid $colorEasyBlue;
+    border-radius: 12px;
+
+    &:hover {
+      background-color: $colorBabyBlue;
+    }
+  }
+
+  &.orange {
+    width: 100%;
+    height: 34px;
+    padding: 0 8px;
+    gap: 8px;
+    border-radius: 8px;
+    background-color: $colorEasyOrange;
+    border: 1px solid $colorPeachOrange;
+
+    &:hover {
+      background-color: $colorDarkYellow;
+    }
+  }
+
+  &.popup {
+    justify-content: space-between;
+
+    &:hover {
+      background-color: $colorGrokGreen;
+    }
+  }
+
+  &.complete {
+    max-width: 188px;
+    width: 100%;
+    padding: 6px 16px;
+    background-color: $colorNeutralBlue;
+    border-radius: 12px;
+
+    &:hover {
+      background-color: $colorBabyBlue;
+    }
+  }
+
+  &.drip {
+    padding: 6px 16px;
+    text-transform: uppercase;
+    border-radius: 12px;
+    background-color: $colorNeutralBlue;
+
+    &:hover {
+      background-color: $colorBabyBlue;
+    }
+  }
+
+  &.level {
+    border: 1px solid $colorOpacityGreen;
+    background-color: $colorGradeGreen;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: $colorTransGreen;
+    }
+  }
+
+  &.grats {
+    padding: 8px 20px;
+    background-color: $colorMiddleYellow;
+    border-bottom: 6px solid $colorTransGreen;
+    border-radius: 12px;
+
+    &:hover {
+      background-color: $colorLightGreen;
+    }
+  }
+
+  &.danger {
+    height: 34px;
+    min-width: 40px;
+    border-radius: 8px;
+    background-color: $colorSkyRed;
+    border: 1px solid $colorDarkRed;
+
+    &:hover {
+      background-color: $colorLightRed;
+    }
+  }
+
+  &.rush {
+    height: 46px;
+    border-radius: 12px;
+    background: linear-gradient(
+      360deg,
+      rgba(40, 90, 192, 0.62) 0%,
+      rgba(57, 144, 226, 0.62) 26.92%,
+      rgba(64, 166, 239, 0.62) 100%
+    );
+    border: 2px solid $colorRushBlue;
+
+    &:hover {
+      background: linear-gradient(
+        360deg,
+        rgba(31, 79, 175, 0.62) 0%,
+        rgba(49, 132, 209, 0.62) 26.92%,
+        rgba(57, 148, 212, 0.62) 100%
+      );
+    }
+  }
+
+  &.start {
+    width: 261px;
+    height: 147px;
+    border-radius: 24px;
+    background-color: $colorGrokGreen;
+
+    &:hover {
+      background-color: $colorPopupGreen;
+    }
+  }
+
+  &.cash {
+    height: 55px;
+    padding: 0 16px;
+    border-radius: 200px;
+    background: linear-gradient(180deg, #01d4ff 0%, #0093ff 100%);
+
+    &:hover {
+      background: linear-gradient(180deg, #02c7ee 0%, #028ef1 100%);
+    }
+  }
+
+  &.save {
+    width: 302px;
+    height: 48px;
+    border-bottom: 4px solid $colorBlackGreen;
+    border-radius: 16px;
+    background-color: $colorMiddleGreen;
+
+    &:hover {
+      background-color: $colorBlackGreen;
+      border-bottom: 4px solid $colorMiddleGreen;
+    }
+  }
+
+  &.score {
+    width: 178px;
+    height: 44px;
+    border-radius: 60px;
+    background-color: $colorScoreGreen;
+
+    &:hover {
+      background-color: $colorOilBlue;
+    }
+  }
+
+  &.copy {
+    height: 44px;
+    border-radius: 16px;
+    color: $colorEco4Grey;
+    background-color: $colorWhite;
+
+    &:hover {
+      background-color: $colorEco2Grey;
+    }
+  }
+
+  &.img {
+    border-radius: 24px;
+  }
+
+  &.regular {
+    font-weight: 400;
+  }
+
+  &.medium {
+    font-weight: 500;
+  }
+
+  &.semibold {
+    font-weight: 600;
+  }
+
+  &.bold {
+    font-weight: 700;
+  }
+
+  &.s {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &.m {
+    font-size: 19px;
+    line-height: 24px;
+  }
+
+  &.l {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &.rowdies {
+    font-family: $fontRowdies;
+  }
+
+  &.bowlby {
+    font-family: $fontBowlby;
+  }
+
+  &.play-story {
+    font-family: $fontPlayStory;
+  }
+
+  &.montserrat {
+    font-family: $fontMontserrat;
+  }
+
+  &.loading {
+    font-family: $fontRowdies;
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+}

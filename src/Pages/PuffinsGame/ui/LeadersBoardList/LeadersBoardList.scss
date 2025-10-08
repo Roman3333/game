@@ -1,0 +1,18 @@
+@use '@/app/Vars.scss' as *;
+
+.puffins-leaderboards {
+  transition: all 0.3s;
+
+  &__top {
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__suptitles {
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

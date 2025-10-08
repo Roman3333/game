@@ -1,0 +1,56 @@
+.header-rush {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  z-index: 20;
+  transition: all 0.3s;
+
+  &__wrapper {
+    max-width: 1792px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s;
+    opacity: 1;
+
+    &.hidden {
+      z-index: -10;
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+
+  &__lead,
+  &__sign {
+    padding: 0 19px;
+  }
+
+  &__icon {
+    padding: 0 7px;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__blur {
+    position: fixed;
+    height: 100svh;
+    inset: 0;
+    transition: all 0.5s;
+    background: transparent;
+    z-index: -30;
+    pointer-events: none;
+    opacity: 0;
+
+    &.active {
+      z-index: 80;
+      pointer-events: all;
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(15px);
+    }
+  }
+}

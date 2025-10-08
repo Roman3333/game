@@ -1,0 +1,114 @@
+@use '@/app/Vars.scss' as *;
+
+.rush-win {
+  max-width: 628px;
+  max-height: 431px;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    360deg,
+    rgba(40, 90, 192, 0.62) 0%,
+    rgba(64, 166, 239, 0.62) 100%
+  );
+  overflow: visible;
+  border: 2px solid $colorRushBlue;
+
+  .puffins-modal__top {
+    display: none;
+  }
+
+  &__top {
+    margin-top: -150px;
+  }
+
+  &__img {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 77px !important;
+    line-height: 77px !important;
+  }
+
+  &__win {
+    margin: 20px 0 16px;
+    font-size: 20px;
+    line-height: 31px;
+    color: $colorWhite;
+    font-family: $fontBowlby;
+  }
+
+  &__eth {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__count {
+    font-size: 64px;
+    line-height: 64px;
+    color: $colorWhite;
+    font-family: $fontBowlby;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 31px;
+    color: $colorWhite;
+    font-family: $fontBowlby;
+  }
+
+  &__items {
+    margin-top: 24px;
+    display: flex;
+    gap: 28px;
+  }
+
+  &__item {
+    padding: 9px;
+    display: flex;
+    gap: 10px;
+  }
+
+  &__left {
+    width: 68px;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/eclipse.png');
+    background-size: 68px;
+    font-size: 20px;
+    font-weight: 700;
+    color: $colorWhite;
+    font-family: $fontMontserrat;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__suptitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: $fontMontserrat;
+    color: $colorWhite;
+  }
+
+  &__number {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 39px;
+    font-family: $fontMontserrat;
+    color: $colorWhite;
+  }
+
+  &__btn {
+    margin: 50px auto 40px;
+  }
+}

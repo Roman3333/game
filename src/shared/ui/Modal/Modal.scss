@@ -1,0 +1,86 @@
+@use '@/app/Vars.scss' as *;
+
+.ReactModal__Overlay {
+  position: fixed;
+  inset: 0;
+  background-color: transparent !important;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+
+  &--after-open {
+    opacity: 1;
+  }
+
+  &--before-close {
+    opacity: 0;
+  }
+
+  &.fide-bg {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+
+  &.light-blur {
+    background-color: rgba(0, 0, 0, 0.29) !important;
+  }
+}
+
+.ReactModal__Content.ReactModal__Content--after-open {
+  opacity: 1 !important;
+}
+
+.puffins-modal {
+  position: absolute;
+  outline: none;
+  overflow: auto;
+  background: $colorWhite;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  max-width: 646px;
+  max-height: calc(100svh - 40px);
+  width: 100%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  border-bottom: 10px solid $colorNeutralGrey;
+  border-radius: 40px;
+  overflow-x: hidden;
+}
+
+.puffins-modal__top {
+  background: $colorLightGreen;
+  border-bottom: 8px solid $colorMiddleGreen;
+
+  &.xl {
+    padding: 24px;
+  }
+
+  &.l {
+    padding: 21px;
+  }
+}
+
+.puffins-modal__title {
+  width: 99%;
+  text-align: center;
+}
+
+.puffins-modal__btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  &:hover .puffins-modal__cross path {
+    fill: $colorMiddleGreen;
+  }
+}
+
+.puffins-modal__cross {
+  color: $colorMiddleGreen;
+
+  path {
+    transition: all 0.3s;
+  }
+}

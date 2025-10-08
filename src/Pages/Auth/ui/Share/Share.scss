@@ -1,0 +1,59 @@
+@use '@/app/Vars.scss' as *;
+
+.auth-modal {
+  &.auth-modal--big {
+    max-width: 775px;
+  }
+
+  &.show-close-btn {
+    .puffins-modal__btn {
+      display: flex;
+    }
+
+    .puffins-modal__cross {
+      color: transparent;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__back:hover &__arrow path {
+    stroke: $colorEco2Grey;
+  }
+
+  &__skip {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: $fontMontserrat;
+    color: $colorNeutralGrey;
+
+    &:hover {
+      color: $colorEco1Grey;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 11px;
+  }
+
+  &__actions-btn {
+    width: 50% !important;
+    max-height: 44px;
+    border-bottom: none !important;
+    gap: 8px;
+  }
+
+  &__actions-copy path {
+    opacity: 1;
+    stroke: $colorEco4Grey;
+  }
+
+  &__actions-x path {
+    fill: $colorWhite;
+  }
+}

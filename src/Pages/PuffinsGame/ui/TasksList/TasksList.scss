@@ -1,0 +1,19 @@
+@use '@/app/Vars.scss' as *;
+
+.puffin-tasks {
+  &__top {
+    height: 57px;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    background-color: $colorGrokGreen;
+    border-bottom: 4px solid $colorMiddleGreen;
+    border-radius: 16px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

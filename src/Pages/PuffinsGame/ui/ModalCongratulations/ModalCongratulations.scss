@@ -1,0 +1,45 @@
+@use '@/app/Vars.scss' as *;
+
+.puffins-grats {
+  max-width: 540px;
+
+  &__form {
+    padding: 24px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 8px 0;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-family: $fontMontserrat;
+  }
+
+  &__items {
+    margin: 16px 0 32px;
+    display: flex;
+    gap: 40px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__count {
+    font-size: 32px;
+    line-height: 38px;
+    color: $colorLightGrey;
+    font-family: $fontPlayStory;
+  }
+
+  &__btn {
+    font-size: 28px !important;
+    line-height: 35px !important;
+  }
+}

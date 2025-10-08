@@ -1,0 +1,191 @@
+@use '@/app/Vars.scss' as *;
+
+.puffins-pass {
+  position: relative;
+  user-select: none;
+  --scale: 1;
+
+  &__lvl {
+    text-align: center;
+    font-size: calc(24px * var(--scale));
+    line-height: calc(30px * var(--scale));
+    font-family: $fontRowdies;
+    color: $colorWhite;
+  }
+
+  &__wrapper {
+    min-width: calc(200px * var(--scale));
+    height: calc(280px * var(--scale));
+    margin-top: calc(10px * var(--scale));
+    padding: calc(14px * var(--scale)) calc(10px * var(--scale));
+    border: calc(8px * var(--scale)) solid $colorWhite;
+    border-radius: calc(20px * var(--scale));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    &.usual {
+      background: linear-gradient(180deg, #086935 0%, #10cf68 100%);
+    }
+
+    &.special {
+      background: linear-gradient(180deg, #ffae00 0%, #d87600 100%);
+    }
+
+    &.locked-usual::after,
+    &.locked-special::after {
+      position: absolute;
+      content: '';
+      top: calc(-8px * var(--scale));
+      left: calc(-8px * var(--scale));
+      width: calc(100% + calc(16px * var(--scale)));
+      height: calc(100% + calc(16px * var(--scale)));
+      z-index: 10;
+      border-radius: calc(20px * var(--scale));
+    }
+
+    &.locked-usual::after {
+      background: rgba(0, 43, 20, 0.6);
+    }
+
+    &.locked-special::after {
+      background: rgba(33, 19, 0, 0.6);
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    .puffins-pass__fish {
+      position: initial;
+      transform: translate(0, 0);
+    }
+  }
+
+  &__xp {
+    font-size: calc(32px * var(--scale));
+    line-height: calc(40px * var(--scale));
+    color: $colorWhite;
+    font-family: $fontRowdies;
+  }
+
+  &__btn {
+    max-width: calc(144px * var(--scale));
+    height: calc(32px * var(--scale));
+    width: 100%;
+    font-size: calc(16px * var(--scale)) !important;
+    line-height: calc(16px * var(--scale)) !important;
+  }
+
+  &__progress {
+    height: calc(12px * var(--scale));
+    margin-top: calc(40px * var(--scale));
+    width: calc(100% - calc(9px * var(--scale)));
+    transform: translateX(63%);
+    background: linear-gradient(90deg, #006830 97.12%, #0a8744 100%);
+  }
+
+  &__line {
+    height: 100%;
+    background: $colorBlackOrange;
+    transition: all 0.3s;
+  }
+
+  &__circle {
+    width: calc(44px * var(--scale));
+    height: calc(44px * var(--scale));
+    font-size: calc(24px * var(--scale));
+    line-height: calc(30px * var(--scale));
+    bottom: calc(-16px * var(--scale));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $fontRowdies;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    background: $colorDarkOrange;
+    color: rgba($colorWhite, 0.6);
+    border-radius: 100%;
+
+    &.current {
+      opacity: 1;
+      border: calc(2px * var(--scale)) solid $colorWhite;
+      color: $colorWhite;
+    }
+
+    &.locked {
+      opacity: 1;
+      background: $colorJadeGreen;
+      color: $colorWhite;
+    }
+  }
+
+  &:first-of-type::before {
+    position: absolute;
+    content: '';
+    left: calc(-116px * var(--scale));
+    bottom: 0;
+    height: calc(12px * var(--scale));
+    width: calc(120px * var(--scale));
+    transform: translateX(63%);
+    background: $colorBlackOrange;
+    border-radius: 20px 0 0 20px;
+  }
+
+  &:last-of-type .puffins-pass__progress {
+    display: none;
+  }
+
+  &__img-close {
+    width: calc(116px * var(--scale));
+    height: calc(103px * var(--scale));
+    z-index: 3;
+  }
+
+  &__img-open {
+    width: calc(116px * var(--scale));
+    height: calc(127px * var(--scale));
+  }
+
+  &__img-bg {
+    width: calc(200px * var(--scale));
+    height: calc(280px * var(--scale));
+  }
+
+  &__img-lock {
+    width: calc(48px * var(--scale));
+    height: calc(69px * var(--scale));
+    z-index: 15;
+  }
+
+  &__fish {
+    width: calc(32px * var(--scale));
+    height: calc(32px * var(--scale));
+  }
+
+  &__check {
+    width: calc(42px * var(--scale));
+    height: calc(42px * var(--scale));
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -47%);
+  }
+
+  &.small {
+    --scale: 0.5;
+
+    .puffins-pass__progress {
+      display: flex;
+      width: calc(100% - 13px * var(--scale));
+    }
+  }
+}

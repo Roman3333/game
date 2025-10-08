@@ -1,0 +1,136 @@
+@use '@/app/Vars.scss' as *;
+
+.puffins-task {
+  display: flex;
+  background-color: $colorWhite;
+  border-radius: 16px;
+  position: relative;
+  transition: all 0.3s;
+
+  &.multi {
+    cursor: pointer;
+  }
+
+  &__img {
+    margin: 16px 0 16px 22px;
+    border-radius: 16px;
+    background-color: $colorNeutralGrey;
+    object-fit: cover;
+  }
+
+  &__content {
+    width: 100%;
+    padding: 16px 14px 14px 12px;
+    color: $colorBlack;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -50px;
+      width: 50px;
+      height: 100%;
+      background: $colorWhite;
+      clip-path: polygon(100% 0, 0 0, 0% 100%);
+    }
+  }
+
+  &__title {
+    margin: 22.5px 0 8px;
+  }
+
+  &__steps {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__text {
+    font-weight: 500;
+    line-height: 19px;
+    font-family: $fontMontserrat;
+  }
+
+  &__stat {
+    max-width: 310px;
+    width: 100%;
+    padding: 9px 22px 24px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-end;
+    background-color: $colorGrokGreen;
+    border-radius: 0 16px 16px 0;
+  }
+
+  &__items {
+    margin-top: 11px;
+    display: flex;
+    gap: 12px;
+  }
+
+  &__item {
+    width: 108px;
+    height: 40px;
+    padding: 0 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    background-color: rgba($colorRayGreen, 0.7);
+    color: $colorWhite;
+    font-weight: 700;
+    border-radius: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__count {
+    font-family: $fontRowdies;
+  }
+
+  &__xp {
+    font-family: $fontRowdies;
+    font-size: 20px;
+  }
+
+  &__step {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__btn {
+    max-width: 228px;
+    width: 100%;
+    margin-top: auto;
+    padding: 8px;
+  }
+
+  &.disabled:after {
+    position: absolute;
+    content: '';
+    inset: 0;
+    border-radius: 14px;
+    background: rgba($colorOpacityGreen, 0.8);
+    z-index: 5;
+  }
+
+  &__locked {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    max-width: 337px;
+    text-align: center;
+  }
+
+  &__locked-text {
+    margin-top: 12px;
+    font-weight: 800;
+    line-height: 20px;
+    color: $colorWhite;
+    font-family: $fontMontserrat;
+  }
+}

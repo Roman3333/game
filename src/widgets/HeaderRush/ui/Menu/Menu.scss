@@ -1,0 +1,84 @@
+@use '@/app/Vars.scss' as *;
+
+.rush-menu {
+  position: fixed;
+  top: 32px;
+  bottom: 32px;
+  right: 32px;
+  width: 470px;
+  padding: 40px 32px;
+  z-index: 100;
+  transition: all 0.5s;
+  transform: translateX(107%);
+  backdrop-filter: blur(40px);
+  background: linear-gradient(
+    111.03deg,
+    rgba(239, 238, 238, 0.128) 2.82%,
+    rgba(239, 238, 238, 0.024) 90.94%
+  );
+  box-shadow: 8px 8px 28px 0px rgba(255, 255, 255, 0.12) inset;
+  box-shadow: -8px 0px 28px 0px rgba(255, 255, 255, 0.12) inset;
+  border-radius: 16px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &.active {
+    transform: translateX(0%);
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba($colorRushGrey, 0.32);
+    border: 2px solid rgba($colorWhite, 0.24);
+    border-radius: 12px;
+
+    &:hover {
+      background: rgba($colorRushGrey, 0.52);
+    }
+  }
+
+  &__title {
+    margin: 0 auto;
+    transform: translateX(23px);
+    font-size: 40px !important;
+    line-height: 63px !important;
+  }
+
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__link {
+    padding: 11px 12px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-family: $fontMontserrat;
+    color: $colorWhite;
+    background: rgba($colorRushGrey, 0.16);
+    border: 2px solid rgba($colorWhite, 0.24);
+    border-radius: 12px;
+
+    &:hover {
+      background: rgba($colorRushGrey, 0.52);
+    }
+  }
+
+  &__label {
+    margin: 0 auto;
+    transform: translateX(-12px);
+  }
+}

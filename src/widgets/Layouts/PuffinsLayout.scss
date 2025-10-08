@@ -1,0 +1,27 @@
+@use '@/app/Vars.scss' as *;
+
+.puffins-layout {
+  position: relative;
+
+  &--puffins-bg {
+    background-image: url('/images/auth-bg.webp');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      backdrop-filter: blur(6px);
+      background: rgba($colorBlack, 0.75);
+    }
+  }
+
+  &--rush-bg {
+    background-image: url('/images/rush-bg.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

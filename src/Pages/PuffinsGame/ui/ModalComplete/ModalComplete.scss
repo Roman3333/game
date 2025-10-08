@@ -1,0 +1,45 @@
+@use '@/app/Vars.scss' as *;
+
+.complete-puffins {
+  max-width: 462px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__checkbox,
+  &__right {
+    opacity: 0.6;
+  }
+
+  &__item {
+    padding: 14px 19px;
+    display: flex;
+    gap: 12px;
+    border: 2px solid rgba($colorBlack, 0.2);
+    border-radius: 24px;
+
+    &.active {
+      border: 2px solid $colorLightGreen;
+
+      .complete-puffins__checkbox,
+      .complete-puffins__right {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 8px;
+    font-weight: 500;
+    line-height: 20px;
+    font-family: $fontMontserrat;
+    color: $colorLightGrey;
+  }
+
+  &__btn {
+    margin-top: 16px;
+  }
+}

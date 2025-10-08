@@ -1,0 +1,167 @@
+@use '@/app/Vars.scss' as *;
+
+.rush-leaderboard {
+  position: fixed;
+  top: 50px;
+  bottom: 20px;
+  width: 100%;
+  transition: all 0.3s;
+  z-index: -30;
+  pointer-events: none;
+  opacity: 0;
+
+  &.active {
+    z-index: 100;
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  &__back {
+    padding: 0 20px;
+  }
+
+  &__title {
+    font-size: 40px !important;
+    line-height: 46px !important;
+  }
+
+  &__place {
+    min-width: 46px;
+    padding: 0 8px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-family: $fontRowdies;
+    color: $colorWhite;
+  }
+
+  &__num {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: $fontRowdies;
+    color: $colorWhite;
+  }
+
+  &__table {
+    max-width: 1387px;
+    width: 100%;
+    margin: 52px auto 0;
+    padding: 32px 54px;
+    background: linear-gradient(
+      111.03deg,
+      rgba(239, 238, 238, 0.2144) 2.82%,
+      rgba(239, 238, 238, 0.0402) 90.94%
+    );
+    backdrop-filter: blur(15px);
+    box-shadow: 8px 8px 28px 0px rgba(255, 255, 255, 0.12) inset;
+    box-shadow: -8px 0px 28px 0px rgba(255, 255, 255, 0.12) inset;
+    border-radius: 16px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__tabs {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 12px;
+  }
+
+  &__tab {
+    padding: 14px 16px;
+    font-size: 18px;
+    border-radius: 12px;
+    background: transparent;
+    cursor: pointer;
+    font-family: $fontRowdies;
+    color: $colorWhite;
+
+    &.active,
+    &:hover {
+      background: linear-gradient(180deg, #01d4ff 0%, #0093ff 100%);
+    }
+  }
+
+  &__left {
+    max-width: 473px;
+    width: 100%;
+  }
+
+  &__diamond {
+    padding: 20px 18px;
+    border: 1px solid rgba($colorWhite, 0.6);
+    border-radius: 16px;
+  }
+
+  &__diamond-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__diamond-text {
+    font-size: 18px;
+    font-family: $fontRowdies;
+    color: $colorWhite;
+  }
+
+  &__diamond-time {
+    margin-top: 14px;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    font-family: $fontRowdies;
+    color: $colorWhite;
+  }
+
+  &__titles {
+    margin: 24px 0 16px;
+    padding: 0 24px;
+    display: flex;
+    gap: 32px;
+    border-bottom: 2px solid rgba($colorWhite, 0.24);
+    border-radius: 16px;
+  }
+
+  &__titl {
+    padding: 16px 0;
+    font-size: 20px;
+    line-height: 25px;
+    font-family: $fontRowdies;
+    color: $colorWhite;
+
+    &:first-child,
+    &:nth-child(2) {
+      width: 183px;
+    }
+
+    &:last-child {
+      width: 164px;
+      margin: 0 120px 0 auto;
+    }
+  }
+
+  &__items {
+    max-height: calc(100svh - 460px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: auto;
+  }
+}

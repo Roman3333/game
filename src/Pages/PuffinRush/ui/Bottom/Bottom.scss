@@ -1,0 +1,172 @@
+@use '@/app/Vars.scss' as *;
+
+.rush-bottom {
+  max-width: 1667px;
+  width: 100%;
+  margin: auto auto 32px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  &__left,
+  &__right-tabs,
+  &__right-bets {
+    max-height: 74px;
+    background: linear-gradient(
+      360deg,
+      rgba(40, 90, 192, 0.62) 0%,
+      rgba(57, 144, 226, 0.62) 26.92%,
+      rgba(64, 166, 239, 0.62) 100%
+    );
+    border: 2px solid $colorRushBlue;
+    border-radius: 12px;
+  }
+
+  &__left {
+    max-width: 644px;
+    width: 100%;
+    padding: 6px 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  &__left-item {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__left-text {
+    line-height: 20px;
+    font-weight: 700;
+    color: $colorWhite;
+    font-family: $fontMontserrat;
+  }
+
+  &__left-count {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 900;
+    color: $colorWhite;
+    font-family: $fontMontserrat;
+  }
+
+  .rush-bottom__start {
+    font-size: 40px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+
+  &__right-tabs {
+    padding: 7px 24px;
+    display: flex;
+    gap: 24px;
+  }
+
+  &__right-tab {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    transition: background 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      background: linear-gradient(180deg, #01d4ff 0%, #0093ff 100%);
+      border: 2px solid $colorWhite;
+    }
+  }
+
+  &__right-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__right-span,
+  &__right-bet {
+    line-height: 20px;
+    font-weight: 700;
+    color: $colorWhite;
+    font-family: $fontMontserrat;
+  }
+
+  &__right-bets {
+    padding: 7px 24px;
+    display: flex;
+    gap: 8px;
+  }
+
+  &__right-bet {
+    height: 56px;
+    padding: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    transition: background 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      background: linear-gradient(180deg, #01d4ff 0%, #0093ff 100%);
+      border: 2px solid $colorWhite;
+    }
+  }
+
+  &__right-eth {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__right-count {
+    white-space: nowrap;
+    font-weight: 700;
+    color: $colorWhite;
+    font-family: $fontMontserrat;
+    background: linear-gradient(180deg, #01d4ff 0%, #0093ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__right-btn {
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 16px;
+    color: $colorWhite;
+    font-family: $fontMontserrat;
+    transition: all 0.3s;
+
+    &:before {
+      content: '/';
+      margin: 0 9px 0 4px;
+    }
+
+    &.active,
+    &:hover {
+      background: linear-gradient(180deg, #01d4ff 0%, #0093ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+}

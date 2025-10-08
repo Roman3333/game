@@ -1,0 +1,62 @@
+@use '@/app/Vars.scss' as *;
+
+.eco-item {
+  padding: 16px 24px;
+  display: flex;
+  gap: 24px;
+  background: $colorWhite;
+  border-radius: 16px;
+
+  &__img {
+    border-radius: 16px;
+  }
+
+  &__centr {
+    padding: 6px 0;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__text {
+    margin-top: 7px;
+    font-weight: 500;
+    line-height: 20px;
+    font-family: $fontMontserrat;
+    color: $colorBlack;
+  }
+
+  &__right {
+    margin-left: auto;
+    padding-top: 10px;
+    display: flex;
+    gap: 8px;
+  }
+
+  &__link {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $colorLinkBlue;
+    border-radius: 12px;
+
+    &:hover {
+      background: $colorNeutralBlue;
+    }
+  }
+
+  &__icon {
+    &.x path {
+      fill: $colorWhite;
+    }
+
+    &.link path {
+      stroke: $colorWhite;
+    }
+  }
+}
