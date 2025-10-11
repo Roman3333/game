@@ -75,7 +75,101 @@ export const Share = (props: ShareProps) => {
         To share achievements, make sure you make them visible first
       </p>
 
-      <form className="auth-modal__form" onSubmit={handleShare}>
+      <form onSubmit={handleShare}>
+        <div className="auth-modal__share">
+          <div className="auth-modal__card">
+            <div className="auth-modal__score">
+              <img
+                src={'/images/avatar-score.png'}
+                width={140}
+                height={140}
+                alt="Your avatar"
+                className="auth-modal__avatar"
+              />
+
+              <div className="auth-modal__score-centr">
+                <span className="auth-modal__score-name">{'Dch_crypt'}</span>
+                <span className="auth-modal__score-rang">Founder</span>
+                <div className="auth-modal__score-items">
+                  <div className="auth-modal__score-item">
+                    <span className="auth-modal__score-opacity">Transactions:</span>
+                    <span className="auth-modal__score-value">123</span>
+                  </div>
+                  <div className="auth-modal__score-item">
+                    <span className="auth-modal__score-opacity">Active days/weeks:</span>
+                    <span className="auth-modal__score-value">544</span>
+                  </div>
+                  <div className="auth-modal__score-item">
+                    <span className="auth-modal__score-opacity">
+                      Posts about abstract:
+                    </span>
+                    <span className="auth-modal__score-value">12</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="auth-modal__score-right">
+                <span className="auth-modal__score-abs">ABSTRACT SCORE</span>
+                <span className="auth-modal__score-count">8421</span>
+              </div>
+            </div>
+
+            <div className="auth-modal__images">
+              <div className="auth-modal__images-parrots">
+                {/* //TODO: возможно тут alt для img нужен другой, я хз. Не понял это
+                статичные картинки или их нужно отрисовывать по условию с бека. */}
+                <img
+                  src={'/images/parrot-1.png'}
+                  width={36}
+                  height={36}
+                  alt="Parrot"
+                  className="auth-modal__images-parrot"
+                />
+                <img
+                  src={'/images/parrot-2.png'}
+                  width={36}
+                  height={36}
+                  alt="Parrot"
+                  className="auth-modal__images-parrot"
+                />
+                <img
+                  src={'/images/parrot-3.png'}
+                  width={36}
+                  height={36}
+                  alt="Parrot"
+                  className="auth-modal__images-parrot"
+                />
+                <img
+                  src={'/images/parrot-4.png'}
+                  width={36}
+                  height={36}
+                  alt="Parrot"
+                  className="auth-modal__images-parrot"
+                />
+                <img
+                  src={'/images/parrot-5.png'}
+                  width={36}
+                  height={36}
+                  alt="Parrot"
+                  className="auth-modal__images-parrot"
+                />
+              </div>
+
+              <img
+                src={'/images/qr.png'}
+                width={52}
+                height={52}
+                alt="QR code"
+                className="auth-modal__images-qr"
+              />
+            </div>
+          </div>
+
+          <Title className="auth-modal__title" weight="regular" font="bowlby">
+            #PUFFINS
+          </Title>
+        </div>
+
         <div className="auth-modal__actions">
           <ButtonPuffin
             className="auth-modal__actions-btn"
