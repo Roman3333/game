@@ -15,8 +15,124 @@
     stroke: $colorEco2Grey;
   }
 
-  &__actions {
+  &__share {
+    position: relative;
+    background-image: url('/images/auth-bg.webp');
+    background-size: cover;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    padding: 24px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba($colorBlack, 0.7);
+      backdrop-filter: blur(2px);
+      border-radius: 16px;
+    }
+  }
+
+  &__card {
+    padding: 24px 28px;
+    position: relative;
+    z-index: 10;
+    border-radius: 16px;
+    background-color: rgba($colorWhite, 0.12);
+  }
+
+  &__score {
     display: flex;
-    gap: 11px;
+  }
+
+  &__avatar {
+    border-radius: 100%;
+  }
+
+  &__score-centr {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    color: $colorWhite;
+  }
+
+  &__score-name {
+    font-size: 26px;
+    line-height: 32px;
+    font-family: $fontRowdies;
+  }
+
+  &__score-rang {
+    margin: 4px 0 16px;
+    font-weight: 800;
+    line-height: 20px;
+    font-family: $fontMontserrat;
+    color: $colorMiddleGreen;
+  }
+
+  &__score-items {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__score-item {
+    display: flex;
+    gap: 8px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  &__score-opacity {
+    opacity: 0.6;
+    font-family: $fontMontserrat;
+  }
+
+  &__score-value {
+    font-family: $fontMontserrat;
+  }
+
+  &__score-right {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 32px;
+    text-align: end;
+    color: $colorWhite;
+  }
+
+  &__score-abs {
+    max-width: 96px;
+    line-height: 20px;
+    font-family: $fontRowdies;
+  }
+
+  &__score-count {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 64px;
+    font-family: $fontMontserrat;
+  }
+
+  &__images {
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &__images-parrots {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__title {
+    margin-top: 24px;
+    font-size: 40px !important;
+    line-height: 40px !important;
+    text-align: center;
+    position: relative;
+    z-index: 10;
   }
 }
