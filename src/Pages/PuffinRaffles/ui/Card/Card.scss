@@ -1,0 +1,123 @@
+@use '@/app/Vars.scss' as *;
+
+.raffles-card {
+  width: 307px;
+  height: 400px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 30px;
+  background-size: cover;
+  color: $colorWhite;
+
+  &__time {
+    width: fit-content;
+    margin-left: auto;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 32px;
+    font-size: 20px;
+    line-height: 25px;
+    background: rgba($colorEco3Grey, 0.5);
+  }
+
+  &__date {
+    font-family: $fontRowdies;
+  }
+
+  &__content {
+    padding: 16px;
+    border-radius: 32px;
+    background: rgba($colorEco3Grey, 0.62);
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nft {
+    font-weight: 500;
+    opacity: 0.8;
+    font-family: $fontMontserrat;
+  }
+
+  &__status-wrap {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__status,
+  &__lvl {
+    padding: 2px 4px;
+    border-radius: 12px;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+    font-family: $fontMontserrat;
+    background: $colorRafflesViolet;
+  }
+
+  &__lvl {
+    background: $colorRafflesRed;
+  }
+
+  &__title {
+    margin: 8px 0 12px;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: $fontRowdies;
+  }
+
+  &__text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  &__grats {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 500;
+    opacity: 0.8;
+    font-family: $fontMontserrat;
+  }
+
+  &__user {
+    line-height: 19px;
+    font-weight: 800;
+    font-family: $fontMontserrat;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__bottom {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__points {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__count {
+    font-size: 20px;
+    line-height: 25px;
+    font-family: $fontRowdies;
+  }
+}

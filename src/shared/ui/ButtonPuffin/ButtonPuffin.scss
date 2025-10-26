@@ -281,6 +281,21 @@
     }
   }
 
+  &.raffles {
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 16px;
+    background-color: $colorGrokGreen;
+
+    &:hover {
+      background-color: $colorPopupGreen;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+    }
+  }
+
   &.img {
     border-radius: 24px;
   }

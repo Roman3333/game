@@ -56,7 +56,8 @@ export interface ButtonProps
     | 'cash'
     | 'save'
     | 'score'
-    | 'copy';
+    | 'copy'
+    | 'raffles';
   /**
    * Font-family title, по умолчанию rowdies.
    */

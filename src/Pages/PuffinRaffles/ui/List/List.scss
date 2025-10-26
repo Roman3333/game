@@ -1,0 +1,25 @@
+@use '@/app/Vars.scss' as *;
+
+.raffles {
+  color: $colorWhite;
+  position: relative;
+  z-index: 5;
+
+  &__title {
+    font-size: 48px !important;
+    line-height: 60px !important;
+  }
+
+  &__text {
+    margin: 10px 0 33px;
+    line-height: 20px;
+    font-weight: 600;
+    font-family: $fontMontserrat;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

@@ -4,6 +4,7 @@ const PuffinsGamePage = lazy(() => import('@/Pages/PuffinsGame'));
 const AbstractEcoPage = lazy(() => import('@/Pages/AbstractEco'));
 const AuthPage = lazy(() => import('@/Pages/Auth'));
 const PuffinsRashPage = lazy(() => import('@/Pages/PuffinRush'));
+const PuffinRafflesPage = lazy(() => import('@/Pages/PuffinRaffles'));
 import { PuffinsLayout } from '@/widgets/Layouts/PuffinsLayout';
 
 const App: React.FC = () => {
@@ -15,6 +16,7 @@ const App: React.FC = () => {
           <Route path="puffins" element={<PuffinsGamePage />} />
           <Route path="abstract-eco" element={<AbstractEcoPage />} />
           <Route path="rush" element={<PuffinsRashPage />} />
+          <Route path="raffles" element={<PuffinRafflesPage />} />
         </Route>
       </Routes>
     </Suspense>

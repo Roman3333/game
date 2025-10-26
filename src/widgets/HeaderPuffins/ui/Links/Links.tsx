@@ -5,6 +5,7 @@ import './Links.scss';
 const links = [
   { label: 'DASHBOARD', value: '/puffins' },
   { label: 'ABSTRACT ECO', value: '/abstract-eco' },
+  { label: 'RAFFLES', value: '/raffles' },
 ];
 
 export const Links = () => {

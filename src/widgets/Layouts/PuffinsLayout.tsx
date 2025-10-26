@@ -7,7 +7,8 @@ import './PuffinsLayout.scss';
 
 export const PuffinsLayout: React.FC = () => {
   const { pathname } = useLocation();
-  const isPuffinsPage = pathname === '/puffins' || pathname === '/abstract-eco';
+  const isPuffinsPage =
+    pathname === '/puffins' || pathname === '/abstract-eco' || pathname === '/raffles';
   const isRushPage = pathname === '/rush';
 
   return (

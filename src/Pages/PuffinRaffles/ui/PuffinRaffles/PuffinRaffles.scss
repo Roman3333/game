@@ -1,0 +1,6 @@
+@use '@/app/Vars.scss' as *;
+
+.section-raffles__game {
+  min-height: calc(100svh - 92px);
+  padding: 80px 0 40px;
+}
