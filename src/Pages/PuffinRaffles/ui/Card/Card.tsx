@@ -3,15 +3,28 @@ import { formatCoins } from '@/Pages/PuffinsGame';
 import { getFormattedTime } from '../../utils/getFormattedTime';
 import { CardProps } from './types';
 import Clock from '@/shared/assets/svg/clock.svg?react';
+import Gateway from '@/shared/assets/svg/gateway.svg?react';
 import './Card.scss';
 
 export const Card = (props: CardProps) => {
-  const { id, img, time, status, level, title, text, user, points } = props;
+  const {
+    id,
+    img,
+    time,
+    status,
+    level,
+    title,
+    text,
+    user,
+    points,
+    isOnlyHolders,
+    handleOpenBuyModal,
+  } = props;
 
   const handleEnter = async () => {
     try {
       if (status === 'ended') return;
-      console.log(id);
+      handleOpenBuyModal && handleOpenBuyModal(id);
     } catch (error) {
       console.log(error);
     }
@@ -38,6 +51,13 @@ export const Card = (props: CardProps) => {
         <div className="raffles-card__title" title={title}>
           {title}
         </div>
+
+        {isOnlyHolders && (
+          <div className="raffles-card__holders">
+            <Gateway />
+            <span className="raffles-card__holders-text">For Puffin Holders Only</span>
+          </div>
+        )}
 
         {status === 'active' ? (
           <p className="raffles-card__text" title={text}>

@@ -8,4 +8,6 @@ export interface CardProps {
   user: string | null;
   level: number | null;
   points: number;
+  isOnlyHolders: boolean;
+  handleOpenBuyModal?: (id: number) => void;
 }

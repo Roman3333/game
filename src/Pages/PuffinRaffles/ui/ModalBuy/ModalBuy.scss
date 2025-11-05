@@ -1,0 +1,149 @@
+@use '@/app/Vars.scss' as *;
+
+.raffles-buy {
+  max-width: 564px;
+  padding: 32px 40px 27px;
+  border-bottom: none;
+
+  .puffins-modal__top {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .puffins-modal__cross {
+    color: $colorRaffles1Grey;
+
+    path {
+      fill: $colorOpacityGrey;
+    }
+  }
+
+  .puffins-modal__btn {
+    &:hover .puffins-modal__cross path {
+      fill: $colorRushGrey;
+    }
+
+    &:after {
+      position: absolute;
+      right: -96px;
+      top: -96px;
+      content: '';
+      width: 160px;
+      height: 160px;
+      background: $colorRaffles1Grey;
+      z-index: -1;
+      transform: rotate(45deg);
+      cursor: initial;
+    }
+  }
+
+  &__balance {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+  }
+
+  &__text {
+    line-height: 20px;
+    opacity: 0.6;
+    font-family: $fontRowdies;
+    color: $colorLightGrey;
+  }
+
+  &__count {
+    font-family: $fontRowdies;
+    color: $colorLightGrey;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__form {
+    margin: 32px 0;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+  }
+
+  &__actions-btn {
+    width: 56px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: $colorRaffles1Grey;
+
+    svg path {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      background: $colorOpacityGrey;
+
+      svg path {
+        fill: white;
+        stroke: white;
+      }
+    }
+  }
+
+  &__actions-centr {
+    min-width: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  &__actions-value {
+    font-size: 40px;
+    line-height: 50px;
+    font-family: $fontRowdies;
+    color: $colorLightGrey;
+  }
+
+  &__btn {
+    width: 100%;
+    min-height: 44px;
+    margin-top: 20px;
+    gap: 4px;
+  }
+
+  &__btn-text {
+    font-family: $fontRowdies;
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__tickets {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: $fontPlayStory;
+    color: $colorRaffles2Grey;
+  }
+
+  &__your-tickets {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__number {
+    font-family: $fontPlayStory;
+    color: $colorLightGrey;
+    text-align: end;
+  }
+}

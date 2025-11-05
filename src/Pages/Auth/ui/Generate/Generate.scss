@@ -2,7 +2,7 @@
 
 .auth-modal {
   &.auth-modal--big {
-    max-width: 775px;
+    max-width: 1040px;
   }
 
   &__left {
@@ -16,116 +16,107 @@
   }
 
   &__share {
-    position: relative;
-    background-image: url('/images/auth-bg.webp');
-    background-size: cover;
-    border-radius: 16px;
     margin-bottom: 40px;
-    padding: 24px;
-
-    &::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba($colorBlack, 0.7);
-      backdrop-filter: blur(2px);
-      border-radius: 16px;
-    }
   }
 
   &__card {
-    padding: 24px 28px;
-    position: relative;
-    z-index: 10;
+    background-image: url('/images/share-bg.jpg');
+    background-size: cover;
     border-radius: 16px;
-    border: 1px solid $colorEco1Grey;
-    background-color: rgba($colorWhite, 0.12);
+    padding: 32px 28px;
+    color: $colorWhite;
   }
 
   &__score {
     display: flex;
+    align-items: center;
   }
 
   &__avatar {
-    border-radius: 100%;
+    border-radius: 100px;
   }
 
-  &__score-centr {
+  &__centr {
     margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-    color: $colorWhite;
   }
 
-  &__score-name {
-    font-size: 26px;
-    line-height: 32px;
+  &__centr-name {
+    font-size: 40px;
+    line-height: 50px;
+    max-width: 372px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-family: $fontRowdies;
   }
 
-  &__score-rang {
+  &__centr-rang {
     margin: 4px 0 16px;
     font-weight: 800;
-    line-height: 20px;
-    font-family: $fontMontserrat;
+    font-size: 24px;
+    line-height: 29px;
     color: $colorMiddleGreen;
+    font-family: $fontMontserrat;
   }
 
-  &__score-items {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  &__score-item {
+  &__centr-item {
     display: flex;
     gap: 8px;
     font-weight: 600;
-    line-height: 20px;
+    font-size: 24px;
+    line-height: 29px;
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
   }
 
-  &__score-opacity {
+  &__centr-opacity {
     opacity: 0.6;
     font-family: $fontMontserrat;
   }
 
-  &__score-value {
+  &__centr-number {
     font-family: $fontMontserrat;
   }
 
-  &__score-right {
+  &__right {
     margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    gap: 20px;
-    text-align: end;
-    color: $colorWhite;
   }
 
-  &__score-abs {
-    max-width: 96px;
-    line-height: 20px;
+  &__right-text {
+    font-size: 20px;
+    line-height: 25px;
+    text-align: end;
     font-family: $fontRowdies;
   }
 
-  &__score-count {
+  &__right-count {
     font-weight: 700;
-    font-size: 64px;
-    line-height: 64px;
+    font-size: 136px;
     font-family: $fontMontserrat;
   }
 
-  &__images {
-    margin-top: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
+  &__badges {
+    margin-top: 24px;
   }
 
-  &__images-parrots {
+  &__badges-text {
+    margin-top: 24px;
+    font-size: 28px;
+    line-height: 35px;
+    font-family: $fontRowdies;
+  }
+
+  &__badges-list {
+    margin-top: 20px;
     display: flex;
-    gap: 4px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__badge {
+    border-radius: 100%;
   }
 
   &__title {
@@ -133,7 +124,5 @@
     font-size: 40px !important;
     line-height: 40px !important;
     text-align: center;
-    position: relative;
-    z-index: 10;
   }
 }

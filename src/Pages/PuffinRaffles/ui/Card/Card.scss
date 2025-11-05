@@ -79,9 +79,14 @@
 
   &__text {
     overflow: hidden;
+    opacity: 0.8;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+    font-family: $fontMontserrat;
   }
 
   &__grats {
@@ -119,5 +124,22 @@
     font-size: 20px;
     line-height: 25px;
     font-family: $fontRowdies;
+  }
+
+  &__holders {
+    margin-bottom: 12px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 6px;
+    background-color: rgba($colorRaffleOrange, 0.4);
+  }
+
+  &__holders-text {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    font-family: $fontMontserrat;
   }
 }
